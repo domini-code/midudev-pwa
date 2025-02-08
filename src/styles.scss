@@ -1,1 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+.container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+
+  .image-container {
+    margin: 2rem 0;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      max-height: 60vh;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+mat-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+
+  mat-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+
+
+button {
+  margin-top: 1rem;
+  border-radius: 4px;
+  text-transform: none;
+}
+
+.prediction-label {
+  flex: 1;
+  font-weight: bold;
+}
+
+.prediction-prob {
+  color: #666;
+  font-weight: 500;
+}
+
+mat-spinner {
+  margin: 20px auto;
+}
+
+.update-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(97, 1, 65);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
