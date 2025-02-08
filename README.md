@@ -10,18 +10,45 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+// ... existing content ...
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running as a PWA Locally
+
+To test the Progressive Web App (PWA) functionality locally:
+
+1. First build the project for production:
+```bash
+ng build
+```
+
+2. Install http-server globally (if you don't have it):
+```bash
+npm install -g http-server
+```
+
+3. Serve the built files from the dist directory:
+```bash
+http-server -p 8080 -c-1 dist/midudev-pwa/browser
+```
+
+Access your PWA at `http://localhost:8080`. The service worker will only work in production mode and over HTTPS or localhost.
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Additional Resources
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Si deseas más recursos sobre Angular, visita mi canal de YouTube [**dominicode**](https://youtube.com/dominicode)
+- Para más información sobre Angular CLI, consulta la [documentación oficial](https://angular.dev/tools/cli)
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
