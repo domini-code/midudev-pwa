@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Sube una imagen</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <input #imageUpload hidden type="file" accept="image/*" (change)="onFileSelected($event)"/>
+      <button mat-flat-button color="primary" (click)="imageUpload.click()" [disabled]="isPredicting()">
+        <mat-icon>upload</mat-icon>
+        Seleccionar imagen
+      </button>
+
+      @if (!isPredicting() && file()) {
+        <div class="image-container">
+          <img [src]="previewUrl()" alt="Vista previa" class="preview-image" />
+        </div>
+      }
+
+      @if (isPredicting()) {
+        <mat-spinner diameter="40"/>
+      }
+      @if (!isPredicting() && file()) {
+        <mat-card-actions>
+          <button mat-raised-button color="accent" (click)="predict.emit()"  [disabled]="isPredicting()">
+            <mat-icon>image_search</mat-icon>
+            {{ !isPredicting() ? 'Detectar Objectos' : 'Detectando.....' }}
+          </button>
+        </mat-card-actions>
+      }
+  </mat-card-content>
+</mat-card>

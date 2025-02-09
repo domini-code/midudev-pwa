@@ -28,12 +28,18 @@ export class ObjectDetectionService {
     this.isPredicting.set(true);
     try {
       await new Promise((resolve) => (image.onload = resolve));
-      return await this._model()?.classify(image) ?? [];
+      const result = await this._model()?.classify(image) ?? [];
+      debugger;
+      return result;
+      // return await this._model()?.classify(image) ?? [];
     } catch (error) {
       console.log(error);
       this.isPredicting.set(false);
       return [];
-    }  
+    }
+    // } finally {
+    //   this.isPredicting.set(false);
+    // }
   }
 
 }
