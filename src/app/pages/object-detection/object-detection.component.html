@@ -1,6 +1,5 @@
 @if (predictions().length > 0) {
   <app-prediction-list [predictions]="predictions()" />
 }
-{{predictions()}} - predictions
 
 <app-upload-card [isPredicting]="isPredicting()" [file]="file()" (fileUpload)="handleImageUpload($event)" (predict)="predict()"/>
