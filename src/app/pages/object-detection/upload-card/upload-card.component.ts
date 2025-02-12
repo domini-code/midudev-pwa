@@ -27,7 +27,6 @@ export class UploadCardComponent {
   previewUrl = signal<string | null>(null);
 
   onFileSelected(event: Event): void {
-    debugger;
     const input = event.target as HTMLInputElement;
 
     if (input.files?.length) {

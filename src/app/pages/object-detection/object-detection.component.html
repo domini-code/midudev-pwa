@@ -1,5 +1,19 @@
-@if (predictions().length > 0) {
+
+@defer (when predictions().length > 0) {
   <app-prediction-list [predictions]="predictions()" />
 }
 
-<app-upload-card [isPredicting]="isPredicting()" [file]="file()" (fileUpload)="handleImageUpload($event)" (predict)="predict()"/>
+<!-- @if (predictions().length > 0) {
+  <app-prediction-list [predictions]="predictions()" />
+} -->
+@defer (on viewport) {
+  <app-upload-card [isPredicting]="isPredicting()" [file]="file()" (fileUpload)="handleImageUpload($event)" (predict)="predict()"/>
+} @placeholder { 
+  <mat-card class="placeholder-card"> 
+    <mat-spinner diameter="40" />
+  </mat-card>
+}@loading { 
+  <p>Loading.....</p>
+}@error {
+  <p>Ocurrió un error</p>
+}
