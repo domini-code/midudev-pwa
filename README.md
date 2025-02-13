@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
 
+## Course Setup
+
+Para comenzar el curso, utiliza la rama `initial` que contiene el punto de partida inicial:
+```bash
+git checkout initial
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
