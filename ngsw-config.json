@@ -25,6 +25,16 @@
           "/**/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
         ]
       }
+    },
+    {
+      "name": "external_resources",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "resources": {
+        "urls": [
+         "https://tfhub.dev/google/imagenet/mobilenet_v2_100_224/classification/2/model.json?tfjs-format=file"
+        ]
+      }
     }
   ]
 }
